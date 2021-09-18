@@ -1,1 +1,2 @@
+ffmpeg-python==0.2.0
 spleeter==2.3.0
