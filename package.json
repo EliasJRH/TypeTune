@@ -1,0 +1,24 @@
+{
+  "name": "hackthenorth21",
+  "version": "1.0.0",
+  "description": "My team's submission for Hack The North 2021",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EliasJRH/HackTheNorth21.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EliasJRH/HackTheNorth21/issues"
+  },
+  "homepage": "https://github.com/EliasJRH/HackTheNorth21#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "pug": "^3.0.2"
+  }
+}
