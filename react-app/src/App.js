@@ -2,6 +2,7 @@ import React from 'react'
 import './App.scss';
 import Home from './Home';
 import Loading from './Loading';
+import Instruments from './Instruments';
 import axios from 'axios';
 import {
   BrowserRouter as Router,
@@ -28,6 +29,9 @@ function App() {
         <Switch>
           <Route path="/loading">
             <Loading />
+          </Route>
+          <Route path="/instruments">
+            <Instruments />
           </Route>
           <Route path="/">
             <Home />
