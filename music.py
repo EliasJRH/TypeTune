@@ -7,7 +7,9 @@ def sep(file_path):
     from spleeter.separator import Separator
     
     separator = Separator('spleeter:5stems')
-    separator.separate_to_file(file_path, 'output3')
+    separator.separate_to_file('audio.mp3', 'output')
+
+    print("done")
 
 def to_music_xml(file_path):
     corpus.addPath('.')
@@ -24,5 +26,7 @@ def to_music_xml(file_path):
                 print(f"Note: {c.name} {c.octave}")
             print(n.duration.quarterLength)
 
-if sys.argv[1] == 1:
-    pass
+# if sys.argv[2] == 0:
+#     sep(sys.argv[1])
+
+sep('music.mp3')
