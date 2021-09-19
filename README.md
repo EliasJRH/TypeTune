@@ -18,6 +18,13 @@ The notes of the selected instrument would then be mapped to different keys on t
 
 The vocals would be matched with the help of voice recognition software.
 
+##Routes
+| Method | Route        | Description              |   |   |
+|--------|--------------|--------------------------|---|---|
+| GET    | /loading     | Loading screen           |   |   |
+| GET    | /instruments | Instrument select screen |   |   |
+| GET    | /keyboard    | Keyboard screen          |   |   |
+
 ## What the Flow Would Look Like
 ![Sample Flow](./images/wireframe.png)
 
