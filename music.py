@@ -1,4 +1,5 @@
 import sys
+import uuid
 from music21 import *
 
 #Convert audio file to separate audio tracks
@@ -6,12 +7,12 @@ def sep(file_path):
     from spleeter import separator
     from spleeter.separator import Separator
     
+    dirr = '6'
+
     separator = Separator('spleeter:4stems')
-    separator.separate_to_file('audio.mp3', 'output')
+    separator.separate_to_file('audio.mp3', dirr)
 
-
-
-    print("done")
+    print(dirr)
 
 def to_music_xml(file_path):
     corpus.addPath('.')
