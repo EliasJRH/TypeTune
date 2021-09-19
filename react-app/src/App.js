@@ -8,10 +8,8 @@ function App() {
       <header className="App-header">
       </header>
       <div className="background-splash">
-        <img className="background-img" src="/allthree.png" />
-      </div>
-   
-      <div className="main-content stack-top">
+        <img className="background-img" src="/croppedallthree.png" />
+        <div className="main-content stack-top">
         <h1 className="page-title">Play your favorite songs on your favorite instruments.</h1>
         <div className="file-upload-container">
           <div className="upload-button">
@@ -22,6 +20,8 @@ function App() {
           </div>
         </div>
       </div>
+      </div>
+  
     </div></>
   );
 }
