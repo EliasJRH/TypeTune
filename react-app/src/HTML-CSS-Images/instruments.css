@@ -1,0 +1,22 @@
+body {
+  margin:0 auto;
+  background: #FA6464;
+  text-align: center;
+  font-family: 'Arvo', serif;
+}
+
+
+.container{
+  transform: translateY(50%);
+  display: inline-block;
+}
+
+img{
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+h3{
+  font-size: 41.5661px;
+  color: #FFFFFF;
+}

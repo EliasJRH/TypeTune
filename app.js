@@ -8,7 +8,8 @@ const httpStatus = require('http-status');
 const fetch = require('node-fetch');
 
 const app = express()
-const port = 3000
+const cors = require('cors')
+const port = 4000
 
 // app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
