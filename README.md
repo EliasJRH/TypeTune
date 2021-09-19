@@ -18,7 +18,7 @@ The notes of the selected instrument would then be mapped to different keys on t
 
 The vocals would be matched with the help of voice recognition software.
 
-##Routes
+## Routes
 | Method | Route        | Description              |   |   |
 |--------|--------------|--------------------------|---|---|
 | GET    | /loading     | Loading screen           |   |   |
