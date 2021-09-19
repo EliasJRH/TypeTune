@@ -7,8 +7,10 @@ function App() {
     <div className="App">
       <header className="App-header">
       </header>
-      <div className="background-splash"></div>
-      <img className="background-img" src="allthree.png" />
+      <div className="background-splash">
+        <img className="background-img" src="/allthree.png" />
+      </div>
+   
       <div className="main-content stack-top">
         <h1 className="page-title">Play your favorite songs on your favorite instruments.</h1>
         <div className="file-upload-container">
