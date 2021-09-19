@@ -1,6 +1,6 @@
 const express = require('express')
 const fs = require('fs')
-const {spawn} = require('child_process')
+// const {spawn} = require('child_process')
 const session = require('express-session')
 const pug = require('pug')
 
@@ -12,8 +12,13 @@ app.get('/', (req, res) => {
 })
 
 app.post('/song', (req, res) =>{
-  console.log(req)
-  res.send("song sent").status(200);
+
+  let spawn = require("child_process").spawn;
+  let process = spawn('python3',["./music.py"] );
+
+  process.stdout.on('data', function(data) {
+    res.send(data.toString());
+  } )
 })
 
 app.listen(port, () => {
