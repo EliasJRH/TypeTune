@@ -5,7 +5,7 @@ const spawn = require("child_process").spawn;
 const session = require('express-session');
 const { v4: uuidv4 } = require('uuid');
 const httpStatus = require('http-status');
-const { dirname } = require('path');
+const fetch = require('node-fetch');
 
 const app = express()
 const cors = require('cors')
@@ -42,12 +42,6 @@ app.post('/uploadaudio', (req, res) =>{
       });
 
   });
-
-  // let process = spawn('python3', ["./music.py", filename, 0] );
-
-  // process.stdout.on('data', function(data) {
-  //   res.redirect('/pickinstrument/6');
-  // } )
   
   console.log('done')
 
@@ -55,23 +49,22 @@ app.post('/uploadaudio', (req, res) =>{
 
 });
 
+
 app.get('/getsep/:filename', (req,res) =>{
-  res.render("loading.html")
-  let process = spawn('python3', ["./music.py", req.params.filename, 0] );
+  uuid_dirr = uuidv4()
+  let process = spawn('python3', ["./music.py", req.params.filename, 0, uuid_dirr] );
 
   process.stdout.on('close', function(data) {
-    res.redirect('/pickinstrument/:uuid')
+    res.redirect(`/pickinstrument/:${uuid_dirr}`)
   } )
 
 })
 
 app.get('/pickinstrument/:uuid', (req, res) =>{
-  res.sendFile('home2.html', {root: __dirname })
+  fetch()
 })
 
-app.get('/downloadaudio/:uuid/:title', (req, res) =>{
-  res.download(`${__dirname}/${req.params.uuid}/audio/${req.params.title}.wav`)
-})
+
 
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`)
