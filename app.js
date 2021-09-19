@@ -5,7 +5,7 @@ const spawn = require("child_process").spawn;
 const session = require('express-session');
 const { v4: uuidv4 } = require('uuid');
 const httpStatus = require('http-status');
-const fetch = require('node-fetch');
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 const app = express()
 const cors = require('cors')
@@ -61,9 +61,43 @@ app.get('/getsep/:filename', (req,res) =>{
 })
 
 app.get('/pickinstrument/:uuid', (req, res) =>{
-  fetch()
-})
+  res.redirect('instrumentPicked/:instrument')
+});
 
+app.get('/instrumentPicked/:instrument', (req, res) => {
+  // let accessId = '<secret-code-here>';
+
+  // let params = { blocking: false, format: 'json', access_id: accessId, input_file: 'http://www.sonicAPI.com/music/solo_sax.mp3', detailed_results: 'false'};
+
+  // fetch('https://api.sonicAPI.com/analyze/melody', { method: 'get', header: "application/json", data: params})
+  // .then((r) => {
+  //   console.log(r)
+  //   return r.json();
+  // }).then((val)=>{
+  //     let fileId = val.file.file_id;
+
+  //     let polling = setInterval(pollProgress, 500);
+
+  //     let pollProgress = ()=>{
+  //       fetch('https://api.sonicAPI.com/file/status?file_id=' + fileId).then((data)=>{
+  //         return data.json();
+  //       }).then((value)=>{
+  //         if(value.file.status == 'ready'){
+  //           let downloadUrl = 'https://api.sonicAPI.com/file/download?file_id=' + fileId + '&access_id=' + accessId + '&format=json';
+    
+  //           fetch(downloadUrl)
+  //             .then((info)=>{
+  //               return info.json();
+  //             }).then((val)=>{
+  //               console.log(val);
+  //               res.send(val);
+  //             })
+  //             clearInterval(polling);       
+  //           }});   
+  //         }
+  // }).catch(err => console.log(err));
+  res.sendFile('./public/samples/sample.json', {root: __dirname })
+});
 
 
 app.listen(port, () => {
