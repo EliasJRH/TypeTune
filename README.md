@@ -1,4 +1,4 @@
-# Sharp Tune
+# Type Tune
 Hack The North 2021 Submission
 
 The project is stil a work in progress. It is a music game that converts any musical mp3 file into separate instruments that are then to be played by the user.
