@@ -6,8 +6,10 @@ def sep(file_path):
     from spleeter import separator
     from spleeter.separator import Separator
     
-    separator = Separator('spleeter:5stems')
+    separator = Separator('spleeter:4stems')
     separator.separate_to_file('audio.mp3', 'output')
+
+
 
     print("done")
 
