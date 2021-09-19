@@ -5,9 +5,11 @@
   "main": "app.js",
   "scripts": {
     "server": "nodemon app",
+    "client-install": "yarn --cwd react-app install",
     "client": "yarn --cwd react-app run start",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"npm run server\" \"npm run client\""
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "dep-install": "npm install&&npm run client-install"
   },
   "repository": {
     "type": "git",
