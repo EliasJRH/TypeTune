@@ -1,7 +1,7 @@
 const express = require('express')
 const fs = require('fs-extra')
 const formidable = require('formidable')
-// const {spawn} = require('child_process')
+const spawn = require("child_process").spawn;
 const session = require('express-session')
 const pug = require('pug')
 
@@ -14,13 +14,6 @@ app.get('/', (req, res) => {
 
 app.post('/song', (req, res) =>{
 
-  let spawn = require("child_process").spawn;
-  let process = spawn('python3',["./music.py"] );
-
-  process.stdout.on('data', function(data) {
-    res.send(data.toString());
-  } )  
-  
   let form = new formidable.IncomingForm();
   form.uploadDir = "./music";
   form.keepExtensions = true;
@@ -34,8 +27,15 @@ app.post('/song', (req, res) =>{
       if (err)
           throw err;
       });
-      res.send("iss done");
   });
+  
+  let process = spawn('python3', ["./music.py"] );
+
+  process.stdout.on('data', function(data) {
+    res.send(data.toString());
+  } )  
+  
+  
 });
 
 app.listen(port, () => {

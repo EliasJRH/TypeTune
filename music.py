@@ -1,8 +1,6 @@
 import sys
 from music21 import *
 
-print("yes")
-
 #Convert audio file to separate audio tracks
 def sep(file_path):
     from spleeter import separator
@@ -26,3 +24,5 @@ def to_music_xml(file_path):
                 print(f"Note: {c.name} {c.octave}")
             print(n.duration.quarterLength)
 
+if sys.argv[1] == 1:
+    pass
