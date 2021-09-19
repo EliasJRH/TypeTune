@@ -5,9 +5,16 @@ const spawn = require("child_process").spawn;
 const session = require('express-session');
 
 const app = express()
-const port = 3000
+const cors = require('cors')
+const port = 4000
 
-app.get('/', (req, res) => {
+app.use(cors())
+
+app.get("/", (req, res) => {
+  res.send({ exampleMessage: "React client connected to the Express server!"})
+})
+
+app.get('/home', (req, res) => {
   res.sendFile('home.html', {root: __dirname })
 })
 

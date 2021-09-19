@@ -48,7 +48,15 @@
         width: 377.6px;
         height: 45.82px;
         margin: auto;
-
+        position: relative;
+        
+        
+        input[type="file"] {
+          position: relative;
+          text-align: right;
+          opacity: 0;
+          z-index: 2;
+        }
  
         .upload-button {
           width: 232.68px;
@@ -56,7 +64,10 @@
           left: 499px;
           top: 717.34px;
           display: inline-block;
- 
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          z-index: 1;
           background: #FA6464;
  
           p {

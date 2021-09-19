@@ -4,8 +4,10 @@
   "description": "My team's submission for Hack The North 2021",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon app",
+    "client": "yarn --cwd react-app run start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,9 @@
   "homepage": "https://github.com/EliasJRH/HackTheNorth21#readme",
   "dependencies": {
     "child_process": "^1.0.2",
+    "concurrently": "^6.2.1",
     "connect-busboy": "^0.0.2",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-session": "^1.17.2",
     "formidable": "^1.2.2",
