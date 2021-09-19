@@ -2,8 +2,8 @@ from music21 import *
 from spleeter import separator
 from spleeter.separator import Separator
 
-separator = Separator('spleeter:2stems')
-separator.separate_to_file('shrimplipspooplips.mp3', 'output3')
+# separator = Separator('spleeter:2stems')
+# separator.separate_to_file('shrimplipspooplips.mp3', 'output3')
 
 corpus.addPath('.')
 allBach = corpus.parse('./Dead_Half_Way.mxl')
