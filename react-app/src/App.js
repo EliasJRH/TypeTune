@@ -10,6 +10,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import KeyboardPage from './Keyboard';
 
 function App() {
   const [data, setData] = React.useState("");
@@ -32,6 +33,9 @@ function App() {
           </Route>
           <Route path="/instruments">
             <Instruments />
+          </Route>
+          <Route path="/keyboard">
+            <KeyboardPage />
           </Route>
           <Route path="/">
             <Home />

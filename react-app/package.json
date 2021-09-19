@@ -11,7 +11,9 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "react-simple-keyboard": "^3.2.82",
     "sass": "^1.41.1",
+    "simple-keyboard": "^3.2.56",
     "web-vitals": "^1.0.1",
     "yarn": "^1.22.11"
   },
