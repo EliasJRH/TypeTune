@@ -1,7 +1,6 @@
 import sys
 from music21 import *
 
-
 print("yes")
 
 #Convert audio file to separate audio tracks

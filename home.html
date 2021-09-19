@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/song" method="POST">
-        Enter file <input type="file" accept=".mp3,.wav">
+    <form action="/song" method="POST" enctype="multipart/form-data">
+        Enter file <input type="file" name="filetoupload" accept="audio/mp3, audio/wav">
         <input type="submit">
     </form>
 </body>

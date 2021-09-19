@@ -1,0 +1,291 @@
+.App {
+  text-align: center;
+  position: relative;
+ 
+  .background-splash {
+    position: absolute;
+    width: 100vw;
+    height: 65vh;
+    top: 0px;
+ 
+    background: #FA6464;
+  }
+ 
+  .background-img {
+    position: absolute;
+    height: 50vh;
+    top: -20vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+ 
+  .stack-top{
+    z-index: 9;
+  }
+ 
+  .main-content {
+    position: absolute;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+    height: 364px;
+    top: 45%;
+  
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #FFFFFF, #FFFFFF), #FFFFFF;
+    box-shadow: 0px 6.74776px 5.39821px 1.34955px rgba(0, 0, 0, 0.25);
+    
+      .page-title {
+        position: absolute;
+        width: 477px;
+        height: 171px;
+        left: 499px;
+        top: 538px;
+ 
+        font-family: 'Arvo';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 41.5661px;
+        line-height: 51px;
+      
+        color: #000000;
+      }
+ 
+      .file-upload-container {
+        position: absolute;
+        display: flex;
+        width: 377.6px;
+        height: 45.82px;
+        left: 499px;
+        top: 717.34px;
+ 
+        .upload-button {
+          width: 232.68px;
+          height: 45.82px;
+          left: 499px;
+          top: 717.34px;
+ 
+          background: #FA6464;
+ 
+          p {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 17.6218px;
+            line-height: 21px;
+            text-align: center;
+ 
+            color: #FFFFFF;
+          }
+        }
+ 
+        .upload-status {
+          width: 232.68px;
+          height: 45.82px;
+          left: 499px;
+          top: 717.34px;
+ 
+          background: #FFFFFF;
+ 
+          p {
+            width: 147px;
+            height: 24px;
+            left: 730px;
+            top: 730px;
+ 
+            font-family: Lato;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 17.6218px;
+            line-height: 21px;
+            text-align: center;
+ 
+            color: #000000;
+ 
+          }
+        }
+      }
+  }
+}
+ 
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+ 
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+ 
+.App-header {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+ 
+ 
+.App-link {
+  color: #61dafb;
+}
+ 
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+ 
+.App {
+  text-align: center;
+  position: relative;
+ 
+  .background-splash {
+    position: absolute;
+    width: 100vw;
+    height: 65vh;
+    top: 0px;
+ 
+    background: #FA6464;
+  }
+ 
+  .background-img {
+    position: absolute;
+    height: 50vh;
+    top: -20vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+ 
+  .stack-top{
+    z-index: 9;
+  }
+ 
+  .main-content {
+    position: absolute;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+    height: 364px;
+    top: 45%;
+  
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #FFFFFF, #FFFFFF), #FFFFFF;
+    box-shadow: 0px 6.74776px 5.39821px 1.34955px rgba(0, 0, 0, 0.25);
+    
+      .page-title {
+        position: absolute;
+        width: 477px;
+        height: 171px;
+        left: 499px;
+        top: 538px;
+ 
+        font-family: 'Arvo';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 41.5661px;
+        line-height: 51px;
+      
+        color: #000000;
+      }
+ 
+      .file-upload-container {
+        position: absolute;
+        display: flex;
+        width: 377.6px;
+        height: 45.82px;
+        left: 499px;
+        top: 717.34px;
+ 
+        .upload-button {
+          width: 232.68px;
+          height: 45.82px;
+          left: 499px;
+          top: 717.34px;
+ 
+          background: #FA6464;
+ 
+          p {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 17.6218px;
+            line-height: 21px;
+            text-align: center;
+ 
+            color: #FFFFFF;
+          }
+        }
+ 
+        .upload-status {
+          width: 232.68px;
+          height: 45.82px;
+          left: 499px;
+          top: 717.34px;
+ 
+          background: #FFFFFF;
+ 
+          p {
+            width: 147px;
+            height: 24px;
+            left: 730px;
+            top: 730px;
+ 
+            font-family: Lato;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 17.6218px;
+            line-height: 21px;
+            text-align: center;
+ 
+            color: #000000;
+ 
+          }
+        }
+      }
+  }
+}
+ 
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+ 
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+ 
+.App-header {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+ 
+ 
+.App-link {
+  color: #61dafb;
+}
+ 
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

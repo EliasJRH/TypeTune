@@ -1,5 +1,6 @@
 const express = require('express')
-const fs = require('fs')
+const fs = require('fs-extra')
+const formidable = require('formidable')
 // const {spawn} = require('child_process')
 const session = require('express-session')
 const pug = require('pug')
@@ -18,8 +19,24 @@ app.post('/song', (req, res) =>{
 
   process.stdout.on('data', function(data) {
     res.send(data.toString());
-  } )
-})
+  } )  
+  
+  let form = new formidable.IncomingForm();
+  form.uploadDir = "./music";
+  form.keepExtensions = true;
+
+  console.log(form.files)
+  
+  form.parse(req, function(err, fields, files) {
+
+      //Rename the file to its original name (file renamed by formidable)
+      fs.rename(files.filetoupload.path, './music/'+files.filetoupload.name, function(err) {
+      if (err)
+          throw err;
+      });
+      res.send("iss done");
+  });
+});
 
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`)
