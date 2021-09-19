@@ -3,11 +3,9 @@ import uuid
 from music21 import *
 
 #Convert audio file to separate audio tracks
-def sep(file_path):
+def sep(file_path, dirr):
     from spleeter import separator
     from spleeter.separator import Separator
-    
-    dirr = '6'
 
     separator = Separator('spleeter:4stems')
     separator.separate_to_file('audio.mp3', dirr)
@@ -29,7 +27,7 @@ def to_music_xml(file_path):
                 print(f"Note: {c.name} {c.octave}")
             print(n.duration.quarterLength)
 
-# if sys.argv[2] == 0:
-#     sep(sys.argv[1])
+if sys.argv[2] == 0:
+    sep(sys.argv[1], sys.argv[3])
 
-sep('music.mp3')
+# sep('music.mp3')
