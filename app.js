@@ -14,22 +14,18 @@ app.get('/', (req, res) => {
 
 app.post('/song', (req, res) =>{  
   
-  var form = new formidable.IncomingForm();
-  console.log(form);
-  //Formidable uploads to operating systems tmp dir by default
-  form.uploadDir = "./music";       //set upload directory
-  form.keepExtensions = true;     //keep file extension
+  let form = new formidable.IncomingForm();
+  form.uploadDir = "./music";
+  form.keepExtensions = true;
 
   console.log(form.files)
   
   form.parse(req, function(err, fields, files) {
 
-      //Formidable changes the name of the uploaded file
-      //Rename the file to its original name
+      //Rename the file to its original name (file renamed by formidable)
       fs.rename(files.filetoupload.path, './music/'+files.filetoupload.name, function(err) {
       if (err)
           throw err;
-        console.log('renamed complete');  
       });
       res.send("iss done");
   });
